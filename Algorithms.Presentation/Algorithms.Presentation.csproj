@@ -48,5 +48,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Algorithms.Exercises\Algorithms.Exercises.csproj">
+      <Project>{DB1F3F7E-EFC4-4D54-9D55-276FA7F7C30A}</Project>
+      <Name>Algorithms.Exercises</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

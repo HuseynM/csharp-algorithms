@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Algorithms.Exercises.operators_and_expressions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +11,8 @@ namespace Algorithms.Presentation
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(OperatorsAndExpressions.IsOddOrEven(57));
+            Console.ReadLine();
         }
     }
 }
