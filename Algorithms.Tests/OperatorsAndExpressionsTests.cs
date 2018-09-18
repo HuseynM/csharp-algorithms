@@ -25,5 +25,20 @@ namespace Algorithms.Tests
 
         }
 
+
+        [Test]
+        public void IsDivisibleBothDivisorTest()
+        {
+            Assert.IsTrue(IsDivisibleBothDivisor(value:10, divisor1:2, divisor2:5));
+            Assert.IsTrue(IsDivisibleBothDivisor(value: 17, divisor1: 17, divisor2: 1));
+            Assert.IsTrue(IsDivisibleBothDivisor(value: 10, divisor1: -2, divisor2: -5), "Failed when test with negative divisors");
+
+            Assert.IsFalse(IsDivisibleBothDivisor(value: 15, divisor1: 5, divisor2: 10));
+            Assert.IsFalse(IsDivisibleBothDivisor(value: 15, divisor1: 10, divisor2: 5));
+            Assert.IsFalse(IsDivisibleBothDivisor(value: 15, divisor1: 20, divisor2: 30));
+            Assert.IsFalse(IsDivisibleBothDivisor(value: 10, divisor1: 0, divisor2: 0), "Failed when test with zero divisor (should return false)");
+
+        }
+
     }
 }
