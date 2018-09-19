@@ -65,5 +65,28 @@ namespace Algorithms.Tests
         }
 
 
+        [Test]
+        public void SumDigitsTest()
+        {
+
+            Assert.AreEqual(6, SumDigits(123));
+            Assert.AreEqual(6, SumDigits(-123), "Failed when test with negative number");
+            Assert.AreEqual(0, SumDigits(0), "Failed when test with zero");
+            
+            Random rnd = new Random();
+
+            for (int i = 0; i < 1_000_000; i++)
+            {
+                var digits = Enumerable.Range(0, int.MaxValue.ToString().Length - 1).Select(n => rnd.Next(10)).ToList();
+                int expectedSum = digits.Sum();
+                int number = int.Parse(new string(digits.Select(n => n.ToString()[0]).ToArray()));
+
+                Assert.AreEqual(expectedSum, SumDigits(number), $"Failed  when test with {number}");
+
+            }
+
+        }
+
+
     }
 }
