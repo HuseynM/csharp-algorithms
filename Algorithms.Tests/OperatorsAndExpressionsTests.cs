@@ -40,5 +40,19 @@ namespace Algorithms.Tests
 
         }
 
+
+        [Test]
+        public void CheckThirdDigitTest()
+        {
+            Assert.IsTrue(CheckThirdDigit(value:54321, n:3));
+            Assert.IsTrue(CheckThirdDigit(value: 678, n: 6));
+
+            Assert.IsTrue(CheckThirdDigit(value: 12, n: 0), "Failed when test with small (digits count less than three) number");
+
+            Assert.IsTrue(CheckThirdDigit(-23464, 4), "Failed when test with negative number");
+
+            Assert.IsFalse(CheckThirdDigit(-6345, -3));
+        }
+
     }
 }
