@@ -54,5 +54,16 @@ namespace Algorithms.Tests
             Assert.IsFalse(CheckThirdDigit(-6345, -3));
         }
 
+
+        [Test]
+        public void CheckThirdBitTest()
+        {
+            Assert.IsTrue(CheckThirdBit(0));
+            Assert.IsFalse(CheckThirdBit(1 << 2));
+            Assert.IsFalse(CheckThirdBit(int.MaxValue));
+            Assert.IsTrue(CheckThirdBit(~(1 << 2)));
+        }
+
+
     }
 }
