@@ -15,10 +15,11 @@
         {
             /*
              * Write a Boolean expression that checks whether a given integer is
-                divisible by both 5 and 7, without a remainder.
+                divisible by both divisor1 and divisor2, without a remainder.
              */
-
-            return value % divisor1 == 0 && value % divisor2 == 0;
+            if (divisor1 != 0 && divisor2 != 0)
+                return value % divisor1 == 0 && value % divisor2 == 0;
+            return false;
         }
     }
 }
