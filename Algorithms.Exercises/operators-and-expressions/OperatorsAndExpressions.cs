@@ -52,7 +52,7 @@
             return thirdBit == 0;
         }
 
-        public static int SumOfDigits(int value) // Exercise 10-A
+        public static int SumDigits(int value) // Exercise 10-A
         {
             /*
              * Write a program that takes as input a four-digit number in format abcd
@@ -69,5 +69,28 @@
 
             return sum;
         }
+
+        public static int ReverseDigits(int value) // Exercise 10-B
+        {
+            /*
+             * Write a program that takes as input a four-digit number in format abcd
+                (e.g. 2011) and performs the following actions:
+               -Prints on the console the number in reversed order: dcba (in our
+                example 1102).
+             */
+
+            int reversed = 0;
+            while (value > 0)
+            {
+                reversed *= 10;
+                int lastDigit = value % 10;
+                reversed += lastDigit;
+                value = value / 10;
+            }
+
+            return reversed;
+        }
+
+
     }
 }
