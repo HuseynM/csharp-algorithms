@@ -21,5 +21,17 @@
                 return value % divisor1 == 0 && value % divisor2 == 0;
             return false;
         }
+
+        public static bool CheckThirdDigit(int value, int n)
+        {
+            /*
+             * Write an expression that looks for a given integer if its third digit (right
+                to left) is 7.
+             */
+
+            value = value / 100;
+
+            return value % 10 == n;
+        }
     }
 }
