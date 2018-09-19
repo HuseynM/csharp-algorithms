@@ -1,4 +1,6 @@
-﻿namespace Algorithms.Exercises.operators_and_expressions
+﻿using System;
+
+namespace Algorithms.Exercises.operators_and_expressions
 {
     public static class OperatorsAndExpressions
     {
@@ -51,5 +53,74 @@
 
             return thirdBit == 0;
         }
+
+        public static int SumDigits(int value) // Exercise 10-A
+        {
+            /*
+             * Write a program that takes as input a four-digit number in format abcd
+                (e.g. 2011) and performs the following actions:
+                - Calculates the sum of the digits (in our example 2+0+1+1 = 4).
+             */
+
+            int sum = 0;
+            while (value > 0)
+            {
+                sum += value % 10;
+                value = value / 10;
+            }
+
+            return sum;
+        }
+
+        public static int ReverseDigits(int value) // Exercise 10-B
+        {
+            /*
+             * Write a program that takes as input a four-digit number in format abcd
+                (e.g. 2011) and performs the following actions:
+               -Prints on the console the number in reversed order: dcba (in our
+                example 1102).
+             */
+
+            int reversed = 0;
+            while (value > 0)
+            {
+                reversed *= 10;
+                int lastDigit = value % 10;
+                reversed += lastDigit;
+                value = value / 10;
+            }
+
+            return reversed;
+        }
+
+        private static int GetDigitCount(int value)
+        {
+            int i = 0;
+            while (value > 0)
+            {
+                value = value / 10;
+                i++;
+            }
+
+            return i;
+        }
+
+        public static int PutLastDigitInFirst(int value) // Exercise 10 C
+        {
+            /*
+             * Write a program that takes as input a four-digit number in format abcd
+                (e.g. 2011) and performs the following actions:
+                -Puts the last digit in the first position: dabc (in our example 1201).
+             */
+
+            int i = GetDigitCount(value);
+            int lastDigit = value % 10;
+            lastDigit *= (int)Math.Pow(10, i - 1);
+            lastDigit += value / 10;
+
+            return lastDigit;
+        }
+
+
     }
 }
