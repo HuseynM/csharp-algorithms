@@ -1,4 +1,6 @@
-﻿namespace Algorithms.Exercises.operators_and_expressions
+﻿using System;
+
+namespace Algorithms.Exercises.operators_and_expressions
 {
     public static class OperatorsAndExpressions
     {
@@ -89,6 +91,34 @@
             }
 
             return reversed;
+        }
+
+        private static int GetDigitCount(int value)
+        {
+            int i = 0;
+            while (value > 0)
+            {
+                value = value / 10;
+                i++;
+            }
+
+            return i;
+        }
+
+        public static int PutLastDigitInFirst(int value) // Exercise 10 C
+        {
+            /*
+             * Write a program that takes as input a four-digit number in format abcd
+                (e.g. 2011) and performs the following actions:
+                -Puts the last digit in the first position: dabc (in our example 1201).
+             */
+
+            int i = GetDigitCount(value);
+            int lastDigit = value % 10;
+            lastDigit *= (int)Math.Pow(10, i - 1);
+            lastDigit += value / 10;
+
+            return lastDigit;
         }
 
 
