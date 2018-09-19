@@ -11,7 +11,7 @@ namespace Algorithms.Presentation
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(OperatorsAndExpressions.IsOddOrEven(57));
+            Console.WriteLine(OperatorsAndExpressions.PutFirstDigitInLast(123456789));
             Console.ReadLine();
         }
     }

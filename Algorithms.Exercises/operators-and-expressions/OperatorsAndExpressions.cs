@@ -121,6 +121,21 @@ namespace Algorithms.Exercises.operators_and_expressions
             return lastDigit;
         }
 
+        public static int PutFirstDigitInLast(int value)
+        {
+            /*
+             * Write a program that takes as input a four-digit number in format abcd
+                (e.g. 2011) and performs the following actions:
+                -Puts the first digit in the last position: bcda (in our example 1201).
+             */
+             //1523
+            int i = GetDigitCount(value);
+            int firstDigit = value / (int)Math.Pow(10, i - 1);
+            value  = value % (int)Math.Pow(10, i - 1);
+            value = value * 10 + firstDigit;
+
+            return value;
+        }
 
     }
 }
