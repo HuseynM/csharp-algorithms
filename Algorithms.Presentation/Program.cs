@@ -11,7 +11,7 @@ namespace Algorithms.Presentation
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(OperatorsAndExpressions.ExchangeDigits(1489));
+            Console.WriteLine(OperatorsAndExpressions.PrintBitPosition(1489,5));
             Console.ReadLine();
         }
     }

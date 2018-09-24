@@ -137,10 +137,10 @@ namespace Algorithms.Exercises.operators_and_expressions
             return value;
         }
 
-        public static int ExchangeDigits(int value)
+        public static int ExchangeDigits(int value) // Exercise 10 D
         {
             /*
-            * Write a program that takes as input a four-digit number in format abcd
+              Write a program that takes as input a four-digit number in format abcd
                (e.g. 2011) and performs the following actions:
               -Exchanges the second and the third digits: acbd (in our example
                2101).
@@ -158,6 +158,20 @@ namespace Algorithms.Exercises.operators_and_expressions
             value = value + secondDigit * 10;
 
             return value;
+
+        }
+
+        public static int PrintBitPosition(int n, byte p) // Exercise 11
+        {
+            /*
+               We are given a number n and a position p. Write a sequence of
+                operations that prints the value of the bit on the position p in the
+                number (0 or 1). Example: n=35, p=5 -> 1. Another example: n=35,
+                p=6 -> 0.
+             */
+
+            int bit = n & (1 << p);
+            return bit == 0 ? 0 : 1;
 
         }
 
