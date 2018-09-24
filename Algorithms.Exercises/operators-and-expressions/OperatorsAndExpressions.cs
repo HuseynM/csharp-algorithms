@@ -170,9 +170,21 @@ namespace Algorithms.Exercises.operators_and_expressions
                 p=6 -> 0.
              */
 
-            int bit = n & (1 << p);
+            int bit = n & (1 << (p - 1));
             return bit == 0 ? 0 : 1;
 
+        }
+
+        public static int CheckBitPosition(int n, int p) // Exercise 12
+        {
+            /*
+               Write a Boolean expression that checks if the bit on position p in the
+                integer n has the value 1. Example v=5, p=1 -> false.
+             */
+
+            int bit = n & (1 << (p - 1));
+
+            return bit != 0;
         }
 
     }
