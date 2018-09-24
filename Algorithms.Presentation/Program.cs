@@ -11,7 +11,7 @@ namespace Algorithms.Presentation
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(OperatorsAndExpressions.PutFirstDigitInLast(123456789));
+            Console.WriteLine(OperatorsAndExpressions.ExchangeDigits(1489));
             Console.ReadLine();
         }
     }
