@@ -175,7 +175,7 @@ namespace Algorithms.Exercises.operators_and_expressions
 
         }
 
-        public static int CheckBitPosition(int n, int p) // Exercise 12
+        public static bool CheckBitPosition(int n, int p) // Exercise 12
         {
             /*
                Write a Boolean expression that checks if the bit on position p in the
@@ -183,8 +183,17 @@ namespace Algorithms.Exercises.operators_and_expressions
              */
 
             int bit = n & (1 << (p - 1));
-
             return bit != 0;
+        }
+
+        public static int ExchangeBits(int n, byte v, byte p) // Exercise 13
+        {
+            /*
+             We are given the number n, the value v (v = 0 or 1) and the position p.
+                write a sequence of operations that changes the value of n, so the bit on
+                the position p has the value of v. Example: n=35, p=5, v=0 -> n=3.
+                Another example: n=35, p=2, v=1 -> n=39.
+             */
         }
 
     }
