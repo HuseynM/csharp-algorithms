@@ -186,7 +186,7 @@ namespace Algorithms.Exercises.operators_and_expressions
             return bit != 0;
         }
 
-        public static int ExchangeBits(int n, byte v, byte p) // Exercise 13
+        public static int ChangeValueOfBit(int n, byte v, byte p) // Exercise 13
         {
             /*
              We are given the number n, the value v (v = 0 or 1) and the position p.
@@ -194,6 +194,8 @@ namespace Algorithms.Exercises.operators_and_expressions
                 the position p has the value of v. Example: n=35, p=5, v=0 -> n=3.
                 Another example: n=35, p=2, v=1 -> n=39.
              */
+
+            return v == 1 ? n | (1 << (p-1)) : n & ~(1 << (p-1));
         }
 
     }
