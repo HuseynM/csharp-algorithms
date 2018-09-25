@@ -198,5 +198,49 @@ namespace Algorithms.Exercises.operators_and_expressions
             return v == 1 ? n | (1 << (p - 1)) : n & ~(1 << (p - 1));
         }
 
+        public static bool CheckPrime(int value) // Exercise 14
+        {
+            /*
+              Write a program that checks if a given number n (1 < n < 100) is a
+                prime number (i.e. it is divisible without remainder only to itself and 1).
+             */
+
+            if (value == 1) return false;
+            if (value == 2) return true;
+
+            for (int i = 2; i <= value / 2; i++)
+            {
+                if (value % i == 0) return false;
+            }
+            return true;
+        }
+
+        public static int ExchangeBits(int n)
+        {
+            /*
+                 Write a program that exchanges the values of the bits on positions
+                 3, 4 and 5 with bits on positions 24, 25 and 26 of a given 32-bit unsigned
+                 integer.
+             */
+
+            byte _3v = (n & (1 << 2)) == 0 ? (byte)0 : (byte)1; // 0001
+            byte _4v = (n & (1 << 3)) == 0 ? (byte)0 : (byte)1;
+            byte _5v = (n & (1 << 4)) == 0 ? (byte)0 : (byte)1;
+
+            byte _24v = (n & (1 << 23)) == 0 ? (byte)0 : (byte)1;
+            byte _25v = (n & (1 << 24)) == 0 ? (byte)0 : (byte)1;
+            byte _26v = (n & (1 << 25)) == 0 ? (byte)0 : (byte)1;
+
+            n = ChangeValueOfBit(n, _3v, 23);
+            n = ChangeValueOfBit(n, _4v, 24);
+            n = ChangeValueOfBit(n, _5v, 25);
+
+            n = ChangeValueOfBit(n, _24v, 2);
+            n = ChangeValueOfBit(n, _25v, 3);
+            n = ChangeValueOfBit(n, _26v, 4);
+
+            return n;
+        }
+
     }
 }
