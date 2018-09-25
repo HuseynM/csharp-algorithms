@@ -194,8 +194,8 @@ namespace Algorithms.Exercises.operators_and_expressions
                 the position p has the value of v. Example: n=35, p=5, v=0 -> n=3.
                 Another example: n=35, p=2, v=1 -> n=39.
              */
-
-            return v == 1 ? n | (1 << (p-1)) : n & ~(1 << (p-1));
+            if (v != 1 && v != 0) return 0;
+            return v == 1 ? n | (1 << (p - 1)) : n & ~(1 << (p - 1));
         }
 
     }
