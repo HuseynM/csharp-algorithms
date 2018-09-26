@@ -26,5 +26,21 @@ namespace Algorithms.Exercises.conditional_statements
             return result;
         }
 
+        public static int FindBiggest(int a, int b, int c)
+        {
+            /*
+             Write a program that finds the biggest of three integers, using nested
+             if statements.
+             */
+
+            if (a > b && a > c)
+                return a;
+            else if (b > a && b > c)
+                return b;
+            else if (c > a && c > b)
+                return c;
+            else
+                return 0;
+        }
     }
 }
