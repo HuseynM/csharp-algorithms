@@ -24,9 +24,9 @@ namespace Algorithms.Exercises.conditional_statements
 
             int[] result = { a, b };
             return result;
-        }
+        } // Exercise 1 
 
-        public static int FindGreatest(int a, int b, int c)
+        public static int FindGreatest(int a, int b, int c)  // Exercise 3
         {
             /*
              Write a program that finds the biggest of three integers, using nested
@@ -41,22 +41,47 @@ namespace Algorithms.Exercises.conditional_statements
                 return c;
             else
                 return 0;
-        }
 
-        public static int FindGreatest(int[] a)
+        } 
+        
+
+        public static int FindGreatest(int[] a) // Exercise 7
         {
             /*
              * Write a program that finds the greatest of given array.
              */
 
-            int _val = int.MinValue;
+            int max = int.MinValue;
             for (int i = 0; i < a.Length; i++)
             {
-                if (_val < i)
-                    _val = a[i];
+                if (max < i)
+                    max = a[i];
             }
 
-            return _val;
+            return max;
+        }
+
+        public static int FindAllGreatestCount(int[] a)
+        {
+            /*
+             * Write a program that finds all greatest numbers of given array.
+             */
+
+            int max = a[0];
+            int count = 0;
+
+            for (int i = 0; i < a.Length; i++)
+            {
+                if (max == a[i])
+                    count += 1;
+                else if (a[i] > max)
+                {
+                    max = a[i];
+                    count = 1;
+                }
+            }
+
+            return count;
         }
 
     }
