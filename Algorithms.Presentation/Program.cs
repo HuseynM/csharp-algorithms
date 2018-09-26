@@ -12,10 +12,8 @@ namespace Algorithms.Presentation
     {
         static void Main(string[] args)
         {
-            foreach (var value in ConditionalStatements.ExchangeValues(5, 3))
-            {
-                Console.WriteLine(value);
-            }
+            int[] array = { -5, -2, -6 };
+            Console.WriteLine(ConditionalStatements.FindGreatest(array));
             Console.ReadLine();
         }
     }

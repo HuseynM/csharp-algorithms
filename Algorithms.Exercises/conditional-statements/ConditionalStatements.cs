@@ -14,7 +14,7 @@ namespace Algorithms.Exercises.conditional_statements
                 Write an if-statement that takes two integer variables and exchanges
                 their values if the first one is greater than the second one.
              */
-             
+
             if (a > b)
             {
                 a = a - b;
@@ -26,7 +26,7 @@ namespace Algorithms.Exercises.conditional_statements
             return result;
         }
 
-        public static int FindBiggest(int a, int b, int c)
+        public static int FindGreatest(int a, int b, int c)
         {
             /*
              Write a program that finds the biggest of three integers, using nested
@@ -42,5 +42,22 @@ namespace Algorithms.Exercises.conditional_statements
             else
                 return 0;
         }
+
+        public static int FindGreatest(int[] a)
+        {
+            /*
+             * Write a program that finds the greatest of given array.
+             */
+
+            int _val = int.MinValue;
+            for (int i = 0; i < a.Length; i++)
+            {
+                if (_val < i)
+                    _val = a[i];
+            }
+
+            return _val;
+        }
+
     }
 }
