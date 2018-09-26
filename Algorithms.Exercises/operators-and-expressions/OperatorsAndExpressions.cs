@@ -23,7 +23,7 @@ namespace Algorithms.Exercises.operators_and_expressions
                 return value % divisor1 == 0 && value % divisor2 == 0;
             return false;
         }
-
+         
         public static bool CheckThirdDigit(int value, int n) // Exercise 3
         {
             /*

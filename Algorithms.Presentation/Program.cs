@@ -1,4 +1,5 @@
-﻿using Algorithms.Exercises.operators_and_expressions;
+﻿using Algorithms.Exercises.conditional_statements;
+using Algorithms.Exercises.operators_and_expressions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,10 @@ namespace Algorithms.Presentation
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(OperatorsAndExpressions.CheckPrime(15));
+            foreach (var value in ConditionalStatements.ExchangeValues(5, 3))
+            {
+                Console.WriteLine(value);
+            }
             Console.ReadLine();
         }
     }
