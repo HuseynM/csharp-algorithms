@@ -12,8 +12,7 @@ namespace Algorithms.Presentation
     {
         static void Main(string[] args)
         {
-            int[] array = { -5, -2, -6, 5 };
-            Console.WriteLine(ConditionalStatements.FindAllGreatest(array));
+            Console.WriteLine(AzWord.ConvertToWord(999));
             Console.ReadLine();
         }
     }
