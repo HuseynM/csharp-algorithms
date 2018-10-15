@@ -1,4 +1,5 @@
-﻿using Algorithms.Exercises.conditional_statements;
+﻿using Algorithms.Exercises.arrays;
+using Algorithms.Exercises.conditional_statements;
 using Algorithms.Exercises.operators_and_expressions;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,7 @@ namespace Algorithms.Presentation
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(AzWord.ConvertToWord(999));
+            Console.WriteLine(Arrays.FindSmallestAndLargest(5));
             Console.ReadLine();
         }
     }
