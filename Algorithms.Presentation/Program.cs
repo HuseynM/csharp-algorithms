@@ -13,11 +13,10 @@ namespace Algorithms.Presentation
     {
         static void Main(string[] args)
         {
-            char[] arr1 = new char[5] { 'a', 'b', 'c', 'd', 'e' };
-            char[] arr2 = new char[5] { 'c', 'b', 'c', 'd', 'e' };
-
-            Console.WriteLine(Arrays.CheckLexicographicalOrder(arr1,arr2));
-
+            foreach (var item in Arrays.FindConsequtiveEqualElements(new int[] { 1, 1, 2, 2, 3, 3, 3, 3 }))
+            {
+                Console.WriteLine(item);
+            }
             Console.ReadLine();
         }
     }

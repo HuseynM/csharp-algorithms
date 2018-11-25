@@ -46,7 +46,7 @@ namespace Algorithms.Exercises.arrays
                 return false;
         }
 
-        public static string CheckLexicographicalOrder(char[] arr1, char[] arr2)
+        public static string CheckLexicographicalOrder(char[] arr1, char[] arr2) //Exercise 3
         {
             /*
              Write a program, which compares two arrays of type char
@@ -78,6 +78,34 @@ namespace Algorithms.Exercises.arrays
                 return result;
             }
 
+        }
+
+        public static int[] FindConsequtiveEqualElements(int[] arr) //Exercise 4
+        {
+            /*
+             Write a program, which finds the maximal sequence of consecutive
+                equal elements in an array. E.g.: {1, 1, 2, 3, 2, 2, 2, 1}  {2, 2, 2}.             */
+
+            int tempCount = 1, count = 1, number = 0;
+            for (int i = 0; i < arr.Length - 1; i++)
+            {
+                if (arr[i] == arr[i + 1]) tempCount++;
+                else tempCount = 1;
+
+                if(tempCount>count)
+                {
+                    count = tempCount;
+                    number = arr[i];
+                }
+            }
+
+            int[] localArr = new int[count];
+            for (int i = 0; i < count; i++)
+            {
+                localArr[i] = number;
+            }
+
+            return localArr;
         }
     }
 }
