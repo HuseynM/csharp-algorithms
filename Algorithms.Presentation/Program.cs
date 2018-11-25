@@ -13,12 +13,12 @@ namespace Algorithms.Presentation
     {
         static void Main(string[] args)
         {
-            int[] arr = new int[20];
+            int[] arr = new int[5] { 1, 2, 3, 4,5 };
+            int[] arr2 = new int[4] { 1, 2, 3, 4 };
 
-            foreach (var a in Arrays.MultipleByFiveArray(arr))
-            {
-                Console.WriteLine(a);
-            }
+            bool result = Arrays.CompareArrays(arr, arr2);
+            Console.WriteLine(result);
+
             Console.ReadLine();
         }
     }

@@ -23,5 +23,27 @@ namespace Algorithms.Exercises.arrays
 
             return array;
         }
+
+        public static bool CompareArrays(int[] arr1, int[] arr2)
+        {
+            /*
+             * Write a program, which reads two arrays from the console and checks
+                whether they are equal (two arrays are equal when they are of equal
+                length and all of their elements, which have the same index, are equal).
+             */
+            bool result = false;
+            if (arr1.Length == arr2.Length)
+            {
+                for (int i = 0; i < arr1.Length; i++)
+                {
+                    if (arr1[i] == arr2[i])
+                        result = true;
+                    else return false;
+                }
+                return result;
+            }
+            else
+                return false;
+        }
     }
 }
