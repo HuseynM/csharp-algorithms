@@ -13,7 +13,12 @@ namespace Algorithms.Presentation
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Arrays.FindSmallestAndLargest(5));
+            int[] arr = new int[20];
+
+            foreach (var a in Arrays.MultipleByFiveArray(arr))
+            {
+                Console.WriteLine(a);
+            }
             Console.ReadLine();
         }
     }
