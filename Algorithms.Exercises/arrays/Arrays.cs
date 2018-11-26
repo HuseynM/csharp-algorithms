@@ -84,7 +84,8 @@ namespace Algorithms.Exercises.arrays
         {
             /*
              Write a program, which finds the maximal sequence of consecutive
-                equal elements in an array. E.g.: {1, 1, 2, 3, 2, 2, 2, 1}  {2, 2, 2}.             */
+                equal elements in an array. E.g.: {1, 1, 2, 3, 2, 2, 2, 1}  {2, 2, 2}.
+             */
 
             int tempCount = 1, count = 1, number = 0;
             for (int i = 0; i < arr.Length - 1; i++)
@@ -92,7 +93,7 @@ namespace Algorithms.Exercises.arrays
                 if (arr[i] == arr[i + 1]) tempCount++;
                 else tempCount = 1;
 
-                if(tempCount>count)
+                if (tempCount > count)
                 {
                     count = tempCount;
                     number = arr[i];
@@ -103,6 +104,69 @@ namespace Algorithms.Exercises.arrays
             for (int i = 0; i < count; i++)
             {
                 localArr[i] = number;
+            }
+
+            return localArr;
+        }
+
+        public static int[] FindConsequtiveIncreasingElements(int[] arr) //Exercise 5
+        {
+            /*
+             * Write a program, which finds the maximal sequence of consecutively
+                placed increasing integers. Example: {3, 2, 3, 4, 2, 2, 4}  {2, 3, 4}.
+
+            int[] arr = new int[5] { 1, 5, 6, 7, 8 };
+             */
+
+            /*
+               int[] arr = new int[5] { 1, 5, 6, 7, 8 };
+            int count = 1;
+            int start = 0;
+            int bestStart = 0;
+            int maxCount = 1;
+            for (int i = 1; i < arr.Length; i++)
+            {
+                if (arr[i] - 1 != arr[i - 1])
+                {
+                    {
+                        count = 0;
+                        start = i;
+                    }
+                }
+                count++;
+                if (count > maxCount)
+                {
+                    bestStart = start;
+                    maxCount = count;
+                }
+            }
+
+            int[] result = new int[maxCount];
+
+            for (int i = 0; i < maxCount; i++)
+            {
+                result[i] = arr[i + bestStart];
+                Console.WriteLine(result[i]);
+            }
+             */
+
+            int tempCount = 1, count = 1, number = 0;
+            for (int i = 0; i < arr.Length - 1; i++)
+            {
+                if (arr[i] + 1 == arr[i + 1]) tempCount++;
+                else tempCount = 1;
+
+                if (tempCount > count)
+                {
+                    count = tempCount;
+                    number = arr[i];
+                }
+            }
+
+            int[] localArr = new int[count];
+            for (int i = 0; i < count; i++)
+            {
+                localArr[i] = (number + 1) - (count - 1) + i;
             }
 
             return localArr;

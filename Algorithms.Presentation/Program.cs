@@ -13,6 +13,12 @@ namespace Algorithms.Presentation
     {
         static void Main(string[] args)
         {
+            int[] arr = new int[11] { 1,2,3,4,5,6,7, 5, 6, 7, 8 };
+
+            foreach (var item in Arrays.FindConsequtiveIncreasingElements(arr))
+            {
+                Console.WriteLine(item);
+            }
             Console.ReadLine();
         }
     }
