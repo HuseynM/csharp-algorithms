@@ -13,10 +13,6 @@ namespace Algorithms.Presentation
     {
         static void Main(string[] args)
         {
-            foreach (var item in Arrays.FindConsequtiveEqualElements(new int[] { 1, 1, 2, 2, 3, 3, 3, 3 }))
-            {
-                Console.WriteLine(item);
-            }
             Console.ReadLine();
         }
     }
