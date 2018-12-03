@@ -15,7 +15,6 @@ namespace Algorithms.Exercises.arrays
              integer and initializes each of the elements with a value equals to the
              index of the element multiplied by 5. Print the elements to the console.
              */
-            array = new int[20];
             for (int i = 0; i < array.Length; i++)
             {
                 array[i] = i * 5;
@@ -31,19 +30,16 @@ namespace Algorithms.Exercises.arrays
                 whether they are equal (two arrays are equal when they are of equal
                 length and all of their elements, which have the same index, are equal).
              */
-            bool result = false;
-            if (arr1.Length == arr2.Length)
-            {
-                for (int i = 0; i < arr1.Length; i++)
-                {
-                    if (arr1[i] == arr2[i])
-                        result = true;
-                    else return false;
-                }
-                return result;
-            }
-            else
+
+            if (arr1.Length != arr2.Length)
                 return false;
+
+            for (int i = 0; i < arr1.Length; i++)
+            {
+                if (arr1[i] != arr2[i])
+                    return false;
+            }
+            return true;
         }
 
         public static string CheckLexicographicalOrder(char[] arr1, char[] arr2) //Exercise 3
@@ -170,6 +166,45 @@ namespace Algorithms.Exercises.arrays
             }
 
             return localArr;
+
+        }
+
+        public static int[] FindMaxSequenceIncreasingElements(int[] arr) //Exercise 6
+        {
+            /*
+             Write a program, which finds the maximal sequence of increasing
+                elements in an array arr[n]. It is not necessary the elements to be
+                consecutively placed. E.g.: {9, 6, 2, 7, 4, 7, 6, 5, 8, 4}  {2, 4, 6, 8}.
+             */
+
+            return new int[] { };
+        }
+
+        public static int[] Sort(int[] arr) //Exercise 8 
+        {
+            /*
+             Sorting an array means to arrange its elements in an increasing (or
+                decreasing) order. Write a program, which sorts an array using the
+                algorithm "selection sort".
+             */
+
+            int n = arr.Length;
+            for (int x = 0; x < n; x++)
+            {
+                int min_index = x;
+                for (int y = x; y < n; y++)
+                {
+                    if (arr[min_index] > arr[y])
+                    {
+                        min_index = y;
+                    }
+                }
+                int temp = arr[x];
+                arr[x] = arr[min_index];
+                arr[min_index] = temp;
+            }
+
+            return arr;
         }
     }
 }
