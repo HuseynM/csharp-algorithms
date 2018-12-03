@@ -196,7 +196,7 @@ namespace Algorithms.Exercises.arrays
                 consecutively placed. E.g.: {9, 6, 2, 7, 4, 7, 6, 5, 8, 4}  {2, 4, 6, 8}.
              */
 
-            return new int[] { };
+            return arr;
         }
 
         public static int[] Sort(int[] arr) //Exercise 8 
@@ -221,6 +221,35 @@ namespace Algorithms.Exercises.arrays
                 int temp = arr[x];
                 arr[x] = arr[min_index];
                 arr[min_index] = temp;
+            }
+
+            return arr;
+        }
+
+        public static int[] FindMostFrequentlyOccuredElement(int[] arr)
+        {
+            /*
+             Write a program, which finds the most frequently occurring element in
+                an array. Example: {4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3}  4 (5 times).
+             */
+            Array.Sort(arr); // {1,1,1,2,2,3,3,4,4,4,4,4,9}
+            int tempCount = 1, count = 1, number = 0;
+            for (int i = 0; i < arr.Length - 1; i++)
+            {
+                if (arr[i] == arr[i + 1]) tempCount++;
+                else tempCount = 1;
+
+                if (tempCount > count)
+                {
+                    count = tempCount;
+                    number = arr[i];
+                }
+            }
+
+            arr = new int[count];
+            for (int i = 0; i < count; i++)
+            {
+                arr[i] = number;
             }
 
             return arr;

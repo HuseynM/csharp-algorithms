@@ -13,9 +13,12 @@ namespace Algorithms.Presentation
     {
         static void Main(string[] args)
         {
-            int[] arr = new int[] {2, 1, 5, 9 };
+            int[] arr = new int[] { 4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3 };
 
-            Arrays.Sort(arr);
+            foreach (var item in Arrays.FindMostFrequentlyOccuredElement(arr))
+            {
+                Console.WriteLine(item);
+            } 
 
             Console.ReadLine();
         }
