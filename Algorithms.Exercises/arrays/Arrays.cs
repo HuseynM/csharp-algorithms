@@ -8,6 +8,25 @@ namespace Algorithms.Exercises.arrays
 {
     public static class Arrays
     {
+        public static int[] FindTwoLargestElements(int[] arr)
+        {
+            int a = int.MinValue, b = int.MinValue;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if (arr[i] > a)
+                {
+                    b = a;
+                    a = arr[i];
+                }
+                else if (arr[i] > b)
+                {
+                    b = arr[i];
+                }
+            }
+
+            return new int[] { a, b };
+        }
         public static int[] MultipleByFiveArray(int[] array) //Exercise 1
         {
             /*

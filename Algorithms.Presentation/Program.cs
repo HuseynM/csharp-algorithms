@@ -13,7 +13,10 @@ namespace Algorithms.Presentation
     {
         static void Main(string[] args)
         {
-            Arrays.CompareArrays(new int[] { 1, 2, 3, 4 }, new int[] { 1, 2, 3, 4 });
+            int[] arr = new int[] {2, 1, 5, 9 };
+
+            Arrays.Sort(arr);
+
             Console.ReadLine();
         }
     }
