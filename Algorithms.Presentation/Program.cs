@@ -13,12 +13,13 @@ namespace Algorithms.Presentation
     {
         static void Main(string[] args)
         {
-            int[] arr =  { 1,2,3,4,5,6,3,4,5,6,7,8,9,10,11 };
+            int[] arr = new int[] { 4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3 };
 
-            foreach (var item in Arrays.FindConsequtiveIncreasingElements(arr))
+            foreach (var item in Arrays.FindMostFrequentlyOccuredElement(arr))
             {
                 Console.WriteLine(item);
-            }
+            } 
+
             Console.ReadLine();
         }
     }
