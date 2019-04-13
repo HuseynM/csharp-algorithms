@@ -13,7 +13,7 @@ namespace Algorithms.Presentation
     {
         static void Main(string[] args)
         {
-            int[] arr = new int[11] { 1,2,3,4,5,6,7, 5, 6, 7, 8 };
+            int[] arr =  { 1,2,3,4,5,6,3,4,5,6,7,8,9,10,11 };
 
             foreach (var item in Arrays.FindConsequtiveIncreasingElements(arr))
             {
