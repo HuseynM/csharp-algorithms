@@ -226,11 +226,12 @@ namespace Algorithms.Exercises.arrays
             return arr;
         }
 
-        public static int[] FindMostFrequentlyOccuredElement(int[] arr)
+        public static int[] FindMostFrequentlyOccuredElement(int[] arr) //Exercise 10
         {
             /*
              Write a program, which finds the most frequently occurring element in
-                an array. Example: {4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3}  4 (5 times).
+                an array. Example: {4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3}  4 (5 times).
+
              */
             Array.Sort(arr); // {1,1,1,2,2,3,3,4,4,4,4,4,9}
             int tempCount = 1, count = 1, number = 0;
@@ -253,6 +254,17 @@ namespace Algorithms.Exercises.arrays
             }
 
             return arr;
+        }
+
+        public static int[] SumOfCertainS(int[] arr, int s = 11) // Exercise 11
+        {
+            /*
+             * Write a program to find a sequence of neighbor numbers in an array,
+                which has a sum of certain number S. Example: {4, 3, 1, 4, 2, 5, 8},
+                S=11  {4, 2, 5}.
+             */
+
+            return new int[] { };
         }
     }
 }
