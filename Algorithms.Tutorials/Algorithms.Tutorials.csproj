@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{674E5F4E-A39F-4B5B-AEAF-CA5625DFD7CD}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>Algorithms.Presentation</RootNamespace>
-    <AssemblyName>Algorithms.Presentation</AssemblyName>
+    <ProjectGuid>{C0BBDA57-198E-4726-A37A-87E38386FF1F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Algorithms.Tutorials</RootNamespace>
+    <AssemblyName>Algorithms.Tutorials</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +24,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -42,21 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="data-structures\Common.cs" />
+    <Compile Include="data-structures\CustomArrayList.cs" />
+    <Compile Include="data-structures\DynamicList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Algorithms.Exercises\Algorithms.Exercises.csproj">
-      <Project>{DB1F3F7E-EFC4-4D54-9D55-276FA7F7C30A}</Project>
-      <Name>Algorithms.Exercises</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Algorithms.Tutorials\Algorithms.Tutorials.csproj">
-      <Project>{c0bbda57-198e-4726-a37a-87e38386ff1f}</Project>
-      <Name>Algorithms.Tutorials</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

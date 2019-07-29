@@ -43,14 +43,13 @@
     <Compile Include="arrays\Arrays.cs" />
     <Compile Include="conditional-statements\AzWord.cs" />
     <Compile Include="conditional-statements\ConditionalStatements.cs" />
+    <Compile Include="data-structures\DataStructure.cs" />
     <Compile Include="loops\Loops.cs" />
     <Compile Include="methods\Methods.cs" />
     <Compile Include="numeral-systems\NumeralSystems.cs" />
     <Compile Include="operators-and-expressions\OperatorsAndExpressions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="data-structures\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
