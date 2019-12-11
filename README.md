@@ -1,4 +1,4 @@
 Some implementations of : <br>
-Bitwise operators
-Data Structures (Array, Custom List, Custom LinkedList)
+Bitwise operators <br>
+Data Structures (Array, Custom List, Custom LinkedList) <br>
 
